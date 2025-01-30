@@ -1,0 +1,7 @@
+image: ubuntu:22.04
+features:
+  - docker-in-docker: true
+tasks:
+  - init: echo "Setting up your Gitpod workspace..."
+devcontainer:
+  path: .devcontainer/devcontainer.json
