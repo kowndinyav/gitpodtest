@@ -1,39 +1,18 @@
 {
-  "name": "Node.js Development Container",
-  "image": "gitpod/workspace-full",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts"
-    }
-  },
+  "name": "Node.js Minimal",
+  "image": "gitpod/workspace-node",
   "customizations": {
     "vscode": {
       "extensions": [
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "christian-kohler.npm-intellisense",
-        "christian-kohler.path-intellisense",
-        "eg2.vscode-npm-script",
-        "formulahendry.auto-close-tag",
-        "formulahendry.auto-rename-tag",
-        "ms-vsliveshare.vsliveshare",
-        "streetsidesoftware.code-spell-checker",
-        "vscode-icons-team.vscode-icons",
-        "wayou.vscode-todo-highlight",
-        "pkief.material-icon-theme"
+        "esbenp.prettier-vscode"
       ],
       "settings": {
         "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": true
-        },
-        "files.autoSave": "afterDelay",
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "workbench.colorTheme": "Default Dark+"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
       }
     }
   },
   "forwardPorts": [3000],
-  "postCreateCommand": "npm install",
-  "remoteUser": "gitpod"
+  "postCreateCommand": "npm install"
 }
